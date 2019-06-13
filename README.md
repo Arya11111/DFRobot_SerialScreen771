@@ -1,11 +1,12 @@
 # 771 RGB flexible Screen 
 
 
-################################################
-该款RGB软屏，由7x71的RGB灯组成，通过串口与主控通信，可显示字符串，改变字体和背景颜色,
-可设置显示亮度和移动速度，修改并显示信息列表的内容
-################################################
 
+This RGB soft screen is composed of 7x71 RGB lights. 
+It communicates with the main control through the serial port 
+to display strings and change the font and background color.
+You can set the display brightness and moving speed, 
+modify and display the contents of the message list.
 
 /*!
      *  @brief Initialize the communication serial port
