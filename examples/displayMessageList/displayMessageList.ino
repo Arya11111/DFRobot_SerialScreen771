@@ -1,8 +1,8 @@
 /*!
   * file displayMessageList.ino
   * 
-  * 初始化8个信息列表M1->M8,直接打印信息列表中为"DFRobot"的列表
-  * @显示以前存储的值为"DFRobot"的列表
+  * Initialize 8 information lists M1->M8 and directly print the list of "DFRobot" in the information list.
+  * @Display a list of previously stored values of "DFRobot"
   *
   * Copyright   [DFRobot](http://www.dfrobot.com), 2016
   * Copyright   GNU Lesser General Public License
@@ -11,6 +11,9 @@
   * date  2019-6-12
   */
 
+#include <Arduino.h>
+#include <HardwareSerial.h>
+#include <SoftwareSerial.h>
 #include "DFRobot_SerialScreen771.h"
 
 #ifdef ARDUINO_AVR_UNO
@@ -21,24 +24,23 @@ DFRobot_SerialScreen771 screen;
 const char *s = "DFRobot";
 eMoveMode_t moveMode;
 
-const char* M1 = "DFRobot";
-const char* M2 = "<CRY>DFRobot";
-const char* M3 = "Hi!";
-const char* M4 = "<CRY>Hello!";
-const char* M5 = "World!";
-const char* M6 = "66";
-const char* M7 = "77";
-const char* M8 = "88";
+const char* M1 = "DFRobot";       //"A"
+const char* M2 = "<CRY>DFRobot";  //"B"
+const char* M3 = "Hi!";           //"C"
+const char* M4 = "<CRY>Hello!";   //"D"
+const char* M5 = "World!";        //"E"
+const char* M6 = "66";            //"F"
+const char* M7 = "77";            //"G"
+const char* M8 = "88";            //"H"
 
 
 void setup() {
-  // put your setup code here, to run once:
-  /*初始化通信接口（Serial1）和调试接口（Serial）*/
+    /*Initialize communication interface (Serial1) and debug interface (Serial)*/
     Serial.begin(115200);
     Serial1.begin(19200);
     screen.begin(Serial1);
     screen.setDbgSerial(Serial);
-    /*发送8个信息列表到串口屏*/
+    /*Send 8 information lists to the serial screen*/
     screen.setMessageList(1, M1);
     screen.setMessageList(2, M2);
     screen.setMessageList(3, M3);
@@ -47,14 +49,16 @@ void setup() {
     screen.setMessageList(6, M6);
     screen.setMessageList(7, M7);
     screen.setMessageList(8, M8);
-    /*打印信息列表中为"DFRobot"的列表，及M0信息列表的数据*/
+    /* Prints a list of "DFRobot" in the message list, and the data of the M0 message list*/
     screen.displayBanner("A");
-	/*打印M8信息列表的数据*/
+    /*Print data of M8 information list*/
     //screen.displayBanner("H");
-	/*打印M1和M8信息列表的数据*/
+    /*Print data for M1 and M8 information lists*/
     //screen.displayBanner("AH");
+    /*Display all information lists for M0~M8*/
+    //screen.displayBanner("ABCDEFGH");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
 }

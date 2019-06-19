@@ -1,12 +1,40 @@
-# 771 RGB flexible Screen 
+# 7x71 Flexible RGB LED Matrix.
 
+This RGB soft screen is composed of 7x71 RGB lights. It communicates with the main control through the serial port to display strings and change the font and background color.
+You can set the display brightness and moving speed, modify and display the contents of the message list.
+################################################
 
+## DFRobot_SerialScreen771 Library for Arduino
+---------------------------------------------------------
+Provide an Arduino library for the 771 RGB flexible Screen.
 
-This RGB soft screen is composed of 7x71 RGB lights. 
-It communicates with the main control through the serial port 
-to display strings and change the font and background color.
-You can set the display brightness and moving speed, 
-modify and display the contents of the message list.
+## Table of Contents
+
+* [Summary](#summary)
+* [Feature](#feature)
+* [Installation](#installation)
+* [Methods](#methods)
+* [Compatibility](#compatibility)
+* [Credits](#credits)
+<snippet>
+<content>
+
+## Summary
+This is a library for the Arduino IDE, which can help Arduino to communicate with 7x71 Flexible RGB LED Matrix.<br>
+The library makes it easy to configure the sensor via Serial<br>
+
+## Feature
+1. Support soft and hard serial communication, baud rate 19200
+
+# Installation
+
+Download the library ZIP file and unzip it to the Arduino folder of the library.<br>
+
+## Methods
+
+```C++
+
+#include "DFRobot_SerialScreen771.h"
 
 /*!
      *  @brief Initialize the communication serial port
@@ -139,3 +167,16 @@ modify and display the contents of the message list.
      *  @return  true if execute successfully, false otherwise.
      */
 bool setFullScreenColor(eColorMode_t color_);
+```
+
+## Compatibility
+
+MCU                | Work Well | Work Wrong | Untested  | Remarks
+------------------ | :----------: | :----------: | :---------: | -----
+Arduino uno |       √      |             |            | 
+Arduino Leonardo |       √      |             |            | 
+Arduino Mega2560  |       √      |             |            | 
+
+## Credits
+
+·author [Arya xue.peng@dfrobot.com]

@@ -1,6 +1,6 @@
 #ifndef __DFROBOT_SERIALSCREEN771_H
 #define __DFROBOT_SERIALSCREEN771_H
-#include<Arduino.h>
+#include <Arduino.h>
 #include <HardwareSerial.h>
 #include <SoftwareSerial.h>
 
@@ -114,14 +114,14 @@ private:
     Stream *s;
     uint8_t sendBuf[BUFSIZE];
     uint8_t cs;
+	uint8_t order;
     eMoveMode_t moveMode;
+	eColorMode_t  backgroud;
+	eColorMode_t  font;
     eBrightLevel_t brightLevel;
     eSpeedLevel_t speedLevel;
-    eColorMode_t  backgroud;
-    eColorMode_t  font;
     char message[MESSAGE_SIZE+1];
     char M[BANNER+1];
-    uint8_t order;
 };
 
 
