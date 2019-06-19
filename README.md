@@ -169,7 +169,6 @@ bool setFullScreenColor(eColorMode_t color_);
 ```
 
 ## Compatibility
-Arduino IDE
 Not compatible with Arduino IDE 1.0.x
 
 
