@@ -2,7 +2,6 @@
 
 This RGB soft screen is composed of 7x71 RGB lights. It communicates with the main control through the serial port to display strings and change the font and background color.
 You can set the display brightness and moving speed, modify and display the contents of the message list.
-################################################
 
 ## DFRobot_SerialScreen771 Library for Arduino
 ---------------------------------------------------------
@@ -170,6 +169,9 @@ bool setFullScreenColor(eColorMode_t color_);
 ```
 
 ## Compatibility
+Arduino IDE
+Not compatible with Arduino IDE 1.0.x
+
 
 MCU                | Work Well | Work Wrong | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
